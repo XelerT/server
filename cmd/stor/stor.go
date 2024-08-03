@@ -12,6 +12,8 @@ type MemStorage struct {
 	counter map[string]int64
 }
 
+var Storage *MemStorage = NewMemStorage()
+
 func NewMemStorage() *MemStorage {
 	return &MemStorage{gauge: make(map[string]float64), counter: make(map[string]int64)}
 }
