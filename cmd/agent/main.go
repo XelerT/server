@@ -18,9 +18,9 @@ const (
 
 func doRequest(client *http.Client, request *http.Request) {
 	response, err := client.Do(request)
-	// if err != nil {
-	// 	continue
-	// }
+	if err != nil {
+		return
+	}
 	fmt.Println("Response status", response.Status)
 	body, err := io.ReadAll(response.Body)
 	if err != nil {
