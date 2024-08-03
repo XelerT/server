@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/XelerT/server.git/cmd/server/stor"
+	"github.com/XelerT/server.git/cmd/stor"
 )
 
 var storage *stor.MemStorage = stor.NewMemStorage()
